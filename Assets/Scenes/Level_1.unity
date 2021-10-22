@@ -790,11 +790,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ffaf0ddc004d4794b9751e8eb6347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BattleSceneName1: MainMenu
-  BattleSceneName2: Level_2
-  PlayButtonLevel1: {fileID: 1095599307}
-  PlayButtonLevel2: {fileID: 1046233434}
-  LoadingLogic: {fileID: 1329073329}
+  battleSceneName1: MainMenu
+  battleSceneName2: Level_2
+  playButtonLevel1: {fileID: 1095599307}
+  playButtonLevel2: {fileID: 1046233434}
+  sceneManagerGO: {fileID: 1329073327}
 --- !u!1 &1046233433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,9 +1261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a05dd199abecc84b96a2890c2c612e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgressBarSlider: {fileID: 712158872}
-  VisualPart: {fileID: 1262183720}
-  FakeLoadTime: 1
+  progressBarSlider: {fileID: 712158872}
+  visualPart: {fileID: 1262183720}
+  fakeLoadTime: 1
 --- !u!1 &1379976840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1763,8 +1763,8 @@ Canvas:
   m_GameObject: {fileID: 2128792508}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1559501759}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
