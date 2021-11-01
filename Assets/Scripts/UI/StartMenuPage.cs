@@ -1,27 +1,56 @@
+using Scene;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class StartMenuPage : MonoBehaviour
+public sealed class StartMenuPage : MonoBehaviour
 {
-    public string BattleSceneName1;
-    public string BattleSceneName2;
-    public Button PlayButtonLevel1;
-    public Button PlayButtonLevel2;
-    public _SceneManager LoadingLogic;
+    [FormerlySerializedAs("BattleSceneName1")]
+    [SerializeField]
+    private string battleSceneName1;
 
+    [FormerlySerializedAs("BattleSceneName2")]
+    [SerializeField]
+    private string battleSceneName2;
+
+    [FormerlySerializedAs("PlayButtonLevel1")]
+    [SerializeField]
+    private Button playButtonLevel1;
+
+    [FormerlySerializedAs("PlayButtonLevel2")]
+    [SerializeField]
+    private Button playButtonLevel2;
+    
+    [FormerlySerializedAs("LoadingLogic")]
+    [SerializeField]
+    private GameObject sceneManagerGO;
+
+    private ISceneManager sceneManager;
+    
     private void Awake()
     {
-        PlayButtonLevel1.onClick.AddListener(PlayGameLevel1);
-        PlayButtonLevel2.onClick.AddListener(PlayGameLevel2);
+        this.sceneManager = this.sceneManagerGO.GetComponent<ISceneManager>();
     }
 
-    private void PlayGameLevel1()
+    private void OnEnable()
     {
-        LoadingLogic._LoadSceneAsync(BattleSceneName1);
+        this.playButtonLevel1.onClick.AddListener(this.OnButton1Clicked);
+        this.playButtonLevel2.onClick.AddListener(this.OnButton2Clicked);
     }
 
-    private void PlayGameLevel2()
+    private void OnDisable()
     {
-        LoadingLogic._LoadSceneAsync(BattleSceneName2);
+        this.playButtonLevel1.onClick.RemoveListener(this.OnButton1Clicked);
+        this.playButtonLevel2.onClick.RemoveListener(this.OnButton2Clicked);
+    }
+
+    private void OnButton1Clicked()
+    {
+        this.sceneManager.LoadSceneAsync(this.battleSceneName1);
+    }
+
+    private void OnButton2Clicked()
+    {
+        this.sceneManager.LoadSceneAsync(this.battleSceneName2);
     }
 }
