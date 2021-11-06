@@ -60,14 +60,12 @@ namespace Igor
 
         public void AddListener<T>(IPopupListener listener)
         {
-            Debug.Log($"ADD LISTENER {listener.GetType().Name} {typeof(T).Name}");
             var popupType = typeof(T);
             this.eventBus.AddListener(popupType, listener);
         }
 
         public void RemoveListener<T>(IPopupListener listener)
         {
-            Debug.Log($"REMOVE LISTENER {listener.GetType().Name} {typeof(T).Name}");
             var popupType = typeof(T);
             this.eventBus.RemoveListener(popupType, listener);
         }

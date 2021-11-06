@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Igor
 {
@@ -39,11 +38,9 @@ namespace Igor
                 return;
             }
             
-            Debug.Log($"POPUP VISIBLE EVENT {popupType.Name} {isVisible}");
             for (int i = 0, count = listeners.Count; i < count; i++)
             {
                 var listener = listeners[i];
-                Debug.Log($"VISIBLE LISTENER {listener.GetType().Name}");
                 listener.OnPopupVisible(popupType, isVisible);
             }
         }
@@ -55,11 +52,9 @@ namespace Igor
                 return;
             }
             
-            Debug.Log($"POPUP ACTIVE EVENT {popupType.Name} {isActive}");
             for (int i = 0, count = listeners.Count; i < count; i++)
             {
                 var listener = listeners[i];
-                Debug.Log($"ACTIVE LISTENER {listener.GetType().Name}");
                 listener.OnPopupActive(popupType, isActive);
             }
         }

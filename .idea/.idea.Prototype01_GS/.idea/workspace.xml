@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8cf20b4b-e3cb-4daf-9595-05e72040a32a" name="Default Changelist" comment="Запилил Popup Manager">
+      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/igor_gulkin/Desktop/Prototype01_GS/Assets/Igor/Scripts/IPopupManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Observer/ObserverList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/IPopupLIstener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/AbstractPopup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/IPopup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StateManager/Interaction/CanvasController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Popup2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Popup1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Popup1Listener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Popup2Listener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupController1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Popup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/IPopupManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/IPopupListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/BasePopup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Counter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Popup1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Counter0.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManagerInjector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Popup0.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CanvasPopup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/Popup2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="20YIqNF3h3QCeh8bQeyu3OKDaHS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cf20b4b-e3cb-4daf-9595-05e72040a32a" name="Default Changelist" comment="" />
+      <created>1636215293228</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636215293228</updated>
+      <workItem from="1636215331744" duration="12625000" />
+    </task>
+    <task id="LOCAL-00001" summary="Пилим Popup Manager">
+      <created>1636220830357</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636220830357</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Запилил Popup Manager">
+      <created>1636227811240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636227811240</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Пилим Popup Manager" />
+    <MESSAGE value="Запилил Popup Manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Запилил Popup Manager" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="494" y="127" key="RiderGenerateDialog" timestamp="1636226640042">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="494" y="127" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1636226640042" />
+    <state x="443" y="163" key="RollbackChangesDialog" timestamp="1636221685327">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="443" y="163" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1636221685327" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1636226481116">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1636226481116" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1636218586247">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1636218586247" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1636226455047">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1636226455047" />
+  </component>
+</project>

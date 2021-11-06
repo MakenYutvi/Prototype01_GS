@@ -39,12 +39,10 @@ namespace Igor
         void IPopupListener.OnPopupVisible(Type popupType, bool isVisible)
         {
             this.nextButton.interactable = !isVisible;
-            Debug.Log($"BUTTON: POPUP VISIBLE {popupType.Name} {isVisible}");
         }
 
         void IPopupListener.OnPopupActive(Type popupType, bool isActive)
         {
-            Debug.Log($"BUTTON: POPUP ACTIVE {popupType.Name} {isActive}");
         }
     }
 }
