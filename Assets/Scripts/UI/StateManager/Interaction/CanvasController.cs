@@ -1,18 +1,20 @@
 using UnityEngine;
-using UnityEngine.Events;
 using Zenject;
 
 namespace Foundation
 {
     public sealed class CanvasController : AbstractBehaviour,
-        IOnStateActivate, IOnStateDeactivate, IOnStateBecomeTopmost, IOnStateResignTopmost, IOnStateSortingOrderChanged
+        IOnStateActivate,
+        IOnStateDeactivate,
+        IOnStateBecomeTopmost,
+        IOnStateResignTopmost,
+        IOnStateSortingOrderChanged
     {
         public Canvas Canvas;
         public CanvasGroup CanvasGroup;
         public Camera EditorCamera;
 
         [Inject] ISceneState state = default;
-        [InjectOptional] ICanvasAnimator animator = default;
 
         void Awake()
         {
@@ -51,19 +53,13 @@ namespace Foundation
         void IOnStateActivate.Do()
         {
             CanvasGroup.blocksRaycasts = true;
-            if (animator != null)
-                animator.AnimateAppear(Canvas, CanvasGroup);
-            else
-                CanvasGroup.alpha = 1.0f;
+            CanvasGroup.alpha = 1.0f;
         }
 
         void IOnStateDeactivate.Do()
         {
             CanvasGroup.blocksRaycasts = false;
-            if (animator != null)
-                animator.AnimateDisappear(Canvas, CanvasGroup);
-            else
-                CanvasGroup.alpha = 0.0f;
+            CanvasGroup.alpha = 0.0f;
         }
 
         void IOnStateSortingOrderChanged.Do(int order)
