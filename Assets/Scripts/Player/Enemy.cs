@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IPropertyInjector
+public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float _cooldown = 1.0f;
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour, IPropertyInjector
     void Start()
     {
         _currentCooldown = _cooldown;
+       // IPropertyInjector.Set(new BulletManager());
     }
 
     // Update is called once per frame
@@ -45,9 +46,5 @@ public class Enemy : MonoBehaviour, IPropertyInjector
         }
     }
 
-    void IPropertyInjector.Set(IPropertyProvider provider)
-    {
-        this._IBulletManager = provider.Get<IBulletManager>(PropertyId.BULLET_SYSTEM);
-       // this.conditionProvider = provider.Get<DamageConditionChecker>(PropertyId.DAMAGE_CHECKER);
-    }
+
 }
