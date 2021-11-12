@@ -8,20 +8,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _cooldown = 1.0f;
     [SerializeField] private float _damage = 10.0f;
     [SerializeField] private GameObject _bullet;
-
     [SerializeField] public Transform _playerPosition;
 
-     private IBulletManager _IBulletManager;
+    [SerializeField] private BulletManager _BulletManager; //есть подозрение, что этого не должно здесь быть
 
 
     private float _currentCooldown;
-    private Vector3 _reverseRotation;
-    private Transform _reverseTransform;
+
 
     void Start()
     {
         _currentCooldown = _cooldown;
-       // IPropertyInjector.Set(new BulletManager());
     }
 
     // Update is called once per frame
@@ -36,8 +33,9 @@ public class Enemy : MonoBehaviour
             //Instantiate(_bullet, this.transform.position, reverseQuaternion);
             //var bullet = Instantiate(_bullet, this.transform);
             //  bullet.SetDirection(_playerPosition.forward);
-             
-            _IBulletManager.LaunchBullet(this.transform.position, this.transform.rotation, this.transform.forward, null);
+            var distance = this._playerPosition.position - this.transform.position;
+            var direction = distance / distance.magnitude;
+            _BulletManager.LaunchBullet(this.transform.position, this._playerPosition.rotation, direction, null);
 
 
 
