@@ -90,6 +90,7 @@ namespace Igor
                 var type = popup.GetType();
                 this.popupDictionary.Add(type, popup);
             }
+            Debug.Log("debug InitializePopups()");
         }
 
         private void MovePopupFirst(Popup popup)
