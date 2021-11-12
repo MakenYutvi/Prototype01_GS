@@ -743,7 +743,7 @@ MonoBehaviour:
   _damage: 10
   _bullet: {fileID: 838326255415148465, guid: 2dda8a2b6149b064da57290a66f51471, type: 3}
   _playerPosition: {fileID: 2073335673}
-  _IBulletManager: {fileID: 576455126}
+  _BulletManager: {fileID: 576455126}
 --- !u!1 &1337023168
 GameObject:
   m_ObjectHideFlags: 0
