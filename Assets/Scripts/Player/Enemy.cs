@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,16 +10,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _damage = 10.0f;
     [SerializeField] private GameObject _bullet;
     [SerializeField] public Transform _playerPosition;
-
-    [SerializeField] private BulletManager _BulletManager; //есть подозрение, что этого не должно здесь быть
-
-
+    
+    private IBulletManager _BulletManager; 
     private float _currentCooldown;
 
 
     void Start()
     {
         _currentCooldown = _cooldown;
+    }
+
+    [Inject]
+    public void Construct(IBulletManager bulletManager)
+    {
+        _BulletManager = bulletManager;
     }
 
     // Update is called once per frame
