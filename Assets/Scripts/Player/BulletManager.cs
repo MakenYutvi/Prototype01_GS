@@ -1,24 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using Zenject;
 
 
-public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
+
+public class BulletManager : MonoInstaller, IBulletManager, Bullet.IHandler
 {
     [SerializeField]
     private Parameters parameters;
 
-    public void LaunchBullet(
-          Vector3 position,
-          Quaternion rotation,
-          Vector3 direction,
-          IBulletListener listener = null
-      )
+    public void LaunchBullet(Vector3 position, Quaternion rotation, Vector3 direction, IBulletListener listener = null)
     {
         var prefab = this.parameters.bulletPrefab;
         var bulletRoot = this.parameters.bulletContainer;
-        var bullet = Instantiate(prefab, position, rotation, bulletRoot);
+        //var bullet = Instantiate(prefab, position, rotation, bulletRoot);
+        var bullet1 = Container.InstantiatePrefab(prefab, position, rotation, bulletRoot);//!!!добавил вместо обычного Instantiate,
+        Bullet bullet = bullet1.GetComponent<Bullet>();// !!!но пришлось монобех поменять на моноисталлер
         bullet.SetHandler(this);
         bullet.SetDirection(direction);
         bullet.SetLifetime(this.parameters.config.lifetime);

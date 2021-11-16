@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using Zenject;
 
 public class GameInstaller : MonoInstaller
@@ -9,6 +10,6 @@ public class GameInstaller : MonoInstaller
              .To<BulletManager>().AsSingle();
 
 
-       //Container.Bind<Enemy>().AsSingle().NonLazy();
+        //Container.Bind<Enemy>().AsSingle().NonLazy();
     }
 }
