@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff726ab68134d347acbd836a7673526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletManager: {fileID: 576455126}
 --- !u!114 &706075499
 MonoBehaviour:
   m_ObjectHideFlags: 0

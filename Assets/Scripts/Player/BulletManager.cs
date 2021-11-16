@@ -7,22 +7,35 @@ using Zenject;
 
 
 
-public class BulletManager : MonoInstaller, IBulletManager, Bullet.IHandler
+public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
 {
     [SerializeField]
     private Parameters parameters;
+
+    [Inject]
+    private DiContainer container;
 
     public void LaunchBullet(Vector3 position, Quaternion rotation, Vector3 direction, IBulletListener listener = null)
     {
         var prefab = this.parameters.bulletPrefab;
         var bulletRoot = this.parameters.bulletContainer;
         //var bullet = Instantiate(prefab, position, rotation, bulletRoot);
-        var bullet1 = Container.InstantiatePrefab(prefab, position, rotation, bulletRoot);//!!!добавил вместо обычного Instantiate,
-        Bullet bullet = bullet1.GetComponent<Bullet>();// !!!но пришлось монобех поменять на моноисталлер
+     
+        Debug.Log($"CONTAINER IS NULL {container == null}");
+        if (container == null)
+        {
+            return;
+        }
+        
+        var bullet1 = container.InstantiatePrefab(prefab, position, rotation, bulletRoot);//!!!пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Instantiate,
+        Bullet bullet = bullet1.GetComponent<Bullet>();// !!!пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         bullet.SetHandler(this);
         bullet.SetDirection(direction);
         bullet.SetLifetime(this.parameters.config.lifetime);
         bullet.SetSpeed(this.parameters.config.speed);
+        
+        
+        
         //this.activeBullets.Add(bullet);
 
         if (listener != null)
@@ -57,5 +70,4 @@ public class BulletManager : MonoInstaller, IBulletManager, Bullet.IHandler
         [SerializeField]
         public BulletConfig config;
     }
-
 }
