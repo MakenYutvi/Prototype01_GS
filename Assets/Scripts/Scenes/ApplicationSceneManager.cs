@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Scene
-{
+
     //Паттерн Заместитель. Оборачивает базовый класс 
     public sealed class ApplicationSceneManager : MonoBehaviour, ISceneManager
     {
@@ -73,4 +72,3 @@ namespace Scene
             DontDestroyOnLoad(this.gameObject);
         }
     }
-}

@@ -26,27 +26,24 @@ public class Enemy : MonoBehaviour
         _BulletManager = bulletManager;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
         _currentCooldown -= Time.deltaTime;
         if(_currentCooldown <= 0.0f)
         {
-            Debug.Log("enemy shoot");
-            //Quaternion reverseQuaternion = Quaternion.Euler(_playerPosition.rotation.eulerAngles.x, _playerPosition.rotation.eulerAngles.y, _playerPosition.rotation.eulerAngles.z);
-            //Instantiate(_bullet, this.transform.position, reverseQuaternion);
-            //var bullet = Instantiate(_bullet, this.transform);
-            //  bullet.SetDirection(_playerPosition.forward);
-            var distance = this._playerPosition.position - this.transform.position;
-            var direction = distance / distance.magnitude;
-            _BulletManager.LaunchBullet(this.transform.position, this._playerPosition.rotation, direction, null);
-
-
-
+            //Debug.Log("enemy shoot");
+            OnShoot();
               _currentCooldown = _cooldown;
 
         }
+    }
+
+    private void OnShoot()
+    {
+        var distance = this._playerPosition.position - this.transform.position;
+        var direction = distance / distance.magnitude;
+        _BulletManager.LaunchBullet(this.transform.position + direction, this._playerPosition.rotation, direction, null);
     }
 
 

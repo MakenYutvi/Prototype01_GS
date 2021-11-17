@@ -1,8 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Scene
-{
+
     public interface ISceneManager
     {
         void LoadSceneAsync(string sceneName);
@@ -77,7 +76,7 @@ namespace Scene
             this.loadingCoroutine = null; 
         }
     }
-}
+
 
 //
 // public class SceneManager : MonoBehaviour, ISceneManager

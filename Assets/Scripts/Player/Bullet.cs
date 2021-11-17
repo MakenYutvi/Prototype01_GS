@@ -27,17 +27,17 @@ public class Bullet : MonoBehaviour
         this._direction = direction;
     }
 
-    //public bool Move()
-    void Update()
+    public bool Move()
+   // void Update()
     {
         if (this._lifeTime > 0)
         {
             this.transform.position += this._speed * Time.fixedDeltaTime * this._direction;
             this._lifeTime -= Time.deltaTime;
-            //return true;
+            return true;
         }
 
-        //return false;
+        return false;
     }
 
     public void SetHandler(IHandler handler)
@@ -48,10 +48,12 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this._handler.OnBulletCollided(this, other);
+        Debug.Log("collder:" + other);
     }
 
     public interface IHandler
     {
         void OnBulletCollided(Bullet bullet, Collider target);
+
     }
 }

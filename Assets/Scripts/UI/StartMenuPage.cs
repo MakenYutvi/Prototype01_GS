@@ -1,4 +1,3 @@
-using Scene;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -53,4 +52,6 @@ public sealed class StartMenuPage : MonoBehaviour
     {
         this.sceneManager.LoadSceneAsync(this.battleSceneName2);
     }
+
+
 }
