@@ -45,11 +45,7 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     void Bullet.IHandler.OnBulletCollided(Bullet bullet, Collider target)
     {
         //if (this.bulletListenerMap.TryGetValue(bullet, out var listener))

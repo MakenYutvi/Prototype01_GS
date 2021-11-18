@@ -19,11 +19,40 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf20b4b-e3cb-4daf-9595-05e72040a32a" name="Default Changelist" comment="Запилил Popup Manager">
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" afterDir="false" />
+    <list default="true" id="8cf20b4b-e3cb-4daf-9595-05e72040a32a" name="Default Changelist" comment="Поправил багу с Zenject">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/System.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/BulletConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/BulletConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/BulletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/BulletManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Enemies/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/System/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GameInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/System/GameInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/IBulletListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/IBulletListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/IBulletListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/IBulletListener.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/IBulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/IBulletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/IBulletManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/IBulletManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem/InputActions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputActions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem/InputActions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputActions.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components/Movement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components/Shoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Shoot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components/Shoot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Utility.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Utility.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +68,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C881E71-2F79-461D-96F9-95658A2D07FF/93/91307aed/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/igor_gulkin/Desktop/Prototype01_GS/Assets/Igor/Scripts/IPopupManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C881E71-2F79-461D-96F9-95658A2D07FF/f1/53dd5446/Component.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,6 +109,11 @@
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" />
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" />
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Bullets/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Components/Movement.cs" />
       </list>
     </option>
   </component>
@@ -96,6 +131,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vcs.patch.path" value="$PROJECT_DIR$/.." />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -127,6 +163,9 @@
       <option name="presentableId" value="Default" />
       <updated>1636215293228</updated>
       <workItem from="1636215331744" duration="12625000" />
+      <workItem from="1637104791151" duration="1760000" />
+      <workItem from="1637108431746" duration="456000" />
+      <workItem from="1637214940680" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="Пилим Popup Manager">
       <created>1636220830357</created>
@@ -142,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636227811240</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Поправил багу с Zenject">
+      <created>1637106348519</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637106348519</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,14 +206,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Пилим Popup Manager" />
     <MESSAGE value="Запилил Popup Manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Запилил Popup Manager" />
+    <MESSAGE value="Поправил багу с Zenject" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправил багу с Zenject" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="100" y="25" width="1240" height="778" key="DiffContextDialog" timestamp="1637106909837">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="25" width="1240" height="778" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1637106909837" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.25.1440.778@0.25.1440.778" timestamp="1637106558831" />
     <state x="494" y="127" key="RiderGenerateDialog" timestamp="1636226640042">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -176,17 +229,21 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="163" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1636221685327" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1636226481116">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1637106682742">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1636226481116" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1637106682742" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1637106351607">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1637106351607" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1636218586247">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1636218586247" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1636226455047">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1637216624741">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1636226455047" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1637216624741" />
   </component>
 </project>

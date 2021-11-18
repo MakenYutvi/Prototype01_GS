@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Bullet : MonoBehaviour
     private float _speed;
     private IHandler _handler;
     private Vector3 _direction;
+    private float _fixedDeltaTime;
 
 
     public void SetLifetime(float lifetime)
@@ -27,13 +29,18 @@ public class Bullet : MonoBehaviour
         this._direction = direction;
     }
 
+    private void Awake()
+    {
+        _fixedDeltaTime = Time.fixedDeltaTime;
+    }
+
     //public bool Move()
-    void Update()
+    void FixedUpdate()
     {
         if (this._lifeTime > 0)
         {
-            this.transform.position += this._speed * Time.fixedDeltaTime * this._direction;
-            this._lifeTime -= Time.deltaTime;
+            this.transform.position += this._speed * _fixedDeltaTime * this._direction;
+            this._lifeTime -= _fixedDeltaTime;
             //return true;
         }
 
