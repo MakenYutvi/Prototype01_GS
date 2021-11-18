@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     private float _speed;
     private IHandler _handler;
     private Vector3 _direction;
+    private float _fixedDeltaTime;
 
 
     public void SetLifetime(float lifetime)
@@ -27,13 +28,17 @@ public class Bullet : MonoBehaviour
         this._direction = direction;
     }
 
+    private void Awake()
+    {
+        this._fixedDeltaTime = Time.fixedDeltaTime;
+    }
     public bool Move()
    // void Update()
     {
         if (this._lifeTime > 0)
         {
-            this.transform.position += this._speed * Time.fixedDeltaTime * this._direction;
-            this._lifeTime -= Time.deltaTime;
+            this.transform.position += this._speed * _fixedDeltaTime * this._direction;
+            this._lifeTime -= _fixedDeltaTime;
             return true;
         }
 
