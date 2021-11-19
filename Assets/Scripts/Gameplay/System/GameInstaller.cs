@@ -18,6 +18,9 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IBulletManager>()
             .To<BulletManager>().FromComponentInHierarchy().AsCached();
 
+        Container.Bind<IWeaponManager>()
+            .To<WeaponManager>().FromComponentInHierarchy().AsCached();
+
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }
 }

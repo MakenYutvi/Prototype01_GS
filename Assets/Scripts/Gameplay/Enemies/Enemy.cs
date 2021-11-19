@@ -9,41 +9,51 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _cooldown = 1.0f;
     [SerializeField] private float _damage = 10.0f;
     [SerializeField] private GameObject _bullet;
-    [SerializeField] public Transform _playerPosition;
+    [SerializeField] private Transform _playerPosition;
+    [SerializeField] private WeaponComponent _weaponComponent;
     
     private IBulletManager _BulletManager; 
+    private IWeaponManager _weaponManager; 
     private float _currentCooldown;
+    private float _fixedDeltaTime;
 
 
     void Start()
     {
         _currentCooldown = _cooldown;
+        this._fixedDeltaTime = Time.fixedDeltaTime;
     }
 
     [Inject]
     public void Construct(IBulletManager bulletManager)
     {
         _BulletManager = bulletManager;
+    }[Inject]
+    public void Construct(IWeaponManager weaponManager)
+    {
+        _weaponManager = weaponManager;
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
-        _currentCooldown -= Time.deltaTime;
+        _currentCooldown -= _fixedDeltaTime;
         if(_currentCooldown <= 0.0f)
         {
             //Debug.Log("enemy shoot");
-            OnShoot();
+            //OnShoot();
+            Attack();
               _currentCooldown = _cooldown;
 
         }
     }
 
-    private void OnShoot()
+
+    private void Attack()
     {
         var distance = this._playerPosition.position - this.transform.position;
         var direction = distance / distance.magnitude;
-        _BulletManager.LaunchBullet(this.transform.position + direction, this._playerPosition.rotation, direction, null);
+        _weaponComponent.Attack(direction);
     }
 
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HP_component : MonoBehaviour
+public class HitPointsComponent : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float _MaxHP = 10.0f;

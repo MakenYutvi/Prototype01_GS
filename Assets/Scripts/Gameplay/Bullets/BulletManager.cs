@@ -22,8 +22,25 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
 
     private ISceneManager sceneManager;
 
+    public delegate void OnCollide(Bullet bullet, Collider target);
+    public event OnCollide OnCollideEvent;
+
+
     [Inject]
     private DiContainer container;
+
+    event IBulletManager.OnCollide IBulletManager.OnCollideEvent
+    {
+        add
+        {
+            throw new NotImplementedException();
+        }
+
+        remove
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     private void Awake()
     {
@@ -64,9 +81,9 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
     void Bullet.IHandler.OnBulletCollided(Bullet bullet, Collider target)
     {
         //ну, это надо переписать
-        if(target.GetComponent<HP_component>())
+        if(target.GetComponent<HitPointsComponent>())
         {
-            float target_HP = target.GetComponent<HP_component>().GetDamage(parameters.config.damage);
+            float target_HP = target.GetComponent<HitPointsComponent>().GetDamage(parameters.config.damage);
             if (target_HP <= 0)
             {
                 if(target.CompareTag("Player"))
@@ -80,6 +97,7 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
             }
             this.DestroyBullet(bullet);
         }
+        OnCollideEvent?.Invoke(bullet, target);
         //if (this.bulletListenerMap.TryGetValue(bullet, out var listener))
         //{
         //    listener.OnBulletCollided(target);
