@@ -22,25 +22,12 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
 
     private ISceneManager sceneManager;
 
-    public delegate void OnCollide(Bullet bullet, Collider target);
-    public event OnCollide OnCollideEvent;
+    public event Action<Collider> OnCollideEvent;
 
 
     [Inject]
     private DiContainer container;
 
-    event IBulletManager.OnCollide IBulletManager.OnCollideEvent
-    {
-        add
-        {
-            throw new NotImplementedException();
-        }
-
-        remove
-        {
-            throw new NotImplementedException();
-        }
-    }
 
     private void Awake()
     {
@@ -97,7 +84,7 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
             }
             this.DestroyBullet(bullet);
         }
-        OnCollideEvent?.Invoke(bullet, target);
+        OnCollideEvent?.Invoke(target);
         //if (this.bulletListenerMap.TryGetValue(bullet, out var listener))
         //{
         //    listener.OnBulletCollided(target);

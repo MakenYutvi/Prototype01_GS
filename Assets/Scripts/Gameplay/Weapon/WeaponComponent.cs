@@ -5,12 +5,11 @@ using Zenject;
 
 public class WeaponComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private DamageController _damageController;
 
     private IBulletManager _BulletManager;
-
-    public delegate void OnCollide(Bullet bullet, Collider target);
-    public event OnCollide OnCollideEvent;
+    public event Action<Collider> OnCollideEvent;
 
     [Inject]
     public void Construct(IBulletManager bulletManager)
@@ -20,7 +19,14 @@ public class WeaponComponent : MonoBehaviour
 
     private void Awake()
     {
-       _BulletManager.OnCollideEvent += OnCollidef;
+       _BulletManager.OnCollideEvent += OnCollideWeaponEvent;
+       
+    }
+
+    private void Start()
+    {
+        _damageController.AddToList(this);
+        Debug.Log("debug awake");
     }
     public void Attack(Vector3 direction)
     {  
@@ -31,9 +37,9 @@ public class WeaponComponent : MonoBehaviour
 
     }
 
-    private void OnCollidef(Bullet bullet, Collider target)
+    private void OnCollideWeaponEvent(Collider target)
     {
-        Debug.Log(bullet.name + target.name);
+        OnCollideEvent?.Invoke(target);
     }
 
 }
