@@ -11,30 +11,23 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
 {
     [SerializeField]
     private Parameters parameters;
-    [SerializeField]
-    private GameObject sceneManagerGO;
-
+   
     private Dictionary<Bullet, IBulletListener> bulletListenerMap;
 
     private List<Bullet> activeBullets;
 
     private List<Bullet> processingBullets;
 
-    private ISceneManager sceneManager;
-
-    public event Action<Collider> OnCollideEvent;
-
+    //public event Action<Collider> OnCollideEvent;
 
     [Inject]
     private DiContainer container;
-
 
     private void Awake()
     {
         this.activeBullets = new List<Bullet>();
         this.processingBullets = new List<Bullet>();
-        this.bulletListenerMap = new Dictionary<Bullet, IBulletListener>();
-        this.sceneManager = this.sceneManagerGO.GetComponent<ISceneManager>();
+        this.bulletListenerMap = new Dictionary<Bullet, IBulletListener>();       
     }
 
     public void LaunchBullet(Vector3 position, Quaternion rotation, Vector3 direction, IBulletListener listener = null)
@@ -66,33 +59,14 @@ public class BulletManager : MonoBehaviour, IBulletManager, Bullet.IHandler
         this.ProcessBullets();
     }
     void Bullet.IHandler.OnBulletCollided(Bullet bullet, Collider target)
-    {
-        //ну, это надо переписать
-        if(target.GetComponent<HitPointsComponent>())
+    {      
+        if (this.bulletListenerMap.TryGetValue(bullet, out var listener))
         {
-            float target_HP = target.GetComponent<HitPointsComponent>().GetDamage(parameters.config.damage);
-            if (target_HP <= 0)
-            {
-                if(target.CompareTag("Player"))
-                {
-                    this.sceneManager.LoadSceneAsync("GameMainMenu3");
-                }
-                else
-                {
-                    Destroy(target.gameObject);
-                }
-            }
+            listener.OnBulletCollided(target);
             this.DestroyBullet(bullet);
         }
-        OnCollideEvent?.Invoke(target);
-        //if (this.bulletListenerMap.TryGetValue(bullet, out var listener))
-        //{
-        //    listener.OnBulletCollided(target);
-        //    this.DestroyBullet(bullet);
-        //    Debug.Log("debug bullet manager");
-        //}
     }
-    // Update is called once per frame
+
     private void ProcessBullets()
     {
         this.processingBullets.Clear();

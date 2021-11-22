@@ -8,7 +8,6 @@ public class MovementComponent : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private float _moveSpeed = 5;
 
-
     public void Move(Vector2 direction)
     {
         float scaledMoveSpeed = _moveSpeed * Time.deltaTime;

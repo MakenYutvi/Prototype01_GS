@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class WeaponComponent : MonoBehaviour
+public class WeaponComponent : MonoBehaviour, IBulletListener
 {
+    [SerializeField]
+    private int _damage = 5;//задел на будущее
     [SerializeField]
     private DamageController _damageController;
 
     private IBulletManager _BulletManager;
-    public event Action<Collider> OnCollideEvent;
+    public event ActionWeapon<Collider> OnCollideEvent;
 
     [Inject]
     public void Construct(IBulletManager bulletManager)
@@ -17,29 +19,24 @@ public class WeaponComponent : MonoBehaviour
         _BulletManager = bulletManager;
     }
 
-    private void Awake()
+    private void OnEnable()
     {
-       _BulletManager.OnCollideEvent += OnCollideWeaponEvent;
-       
+        _damageController.Subscribe(this);
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        _damageController.AddToList(this);
-        Debug.Log("debug awake");
+        _damageController.UnSubscribe(this);
     }
     public void Attack(Vector3 direction)
     {  
-        //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 1000);
-        
-        _BulletManager.LaunchBullet(this.transform.position + direction, this.transform.rotation, direction, null);
-
-
+        //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 1000);       
+        _BulletManager.LaunchBullet(this.transform.position + direction, this.transform.rotation, direction, this);
     }
 
-    private void OnCollideWeaponEvent(Collider target)
+    public void OnBulletCollided(Collider collider)
     {
-        OnCollideEvent?.Invoke(target);
+        //Debug.Log("debug throw listener");
+        OnCollideEvent?.Invoke(collider, _damage);
     }
-
 }

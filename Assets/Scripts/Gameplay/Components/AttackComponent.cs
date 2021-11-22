@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AttackComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
     private WeaponComponent _weaponComponent;
 

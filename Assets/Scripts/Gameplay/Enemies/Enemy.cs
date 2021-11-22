@@ -17,21 +17,21 @@ public class Enemy : MonoBehaviour
     private float _currentCooldown;
     private float _fixedDeltaTime;
 
-
-    void Start()
-    {
-        _currentCooldown = _cooldown;
-        this._fixedDeltaTime = Time.fixedDeltaTime;
-    }
-
     [Inject]
     public void Construct(IBulletManager bulletManager)
     {
         _BulletManager = bulletManager;
-    }[Inject]
+    }
+
+    [Inject]
     public void Construct(IWeaponManager weaponManager)
     {
         _weaponManager = weaponManager;
+    }
+    void Start()
+    {
+        _currentCooldown = _cooldown;
+        this._fixedDeltaTime = Time.fixedDeltaTime;
     }
 
     void FixedUpdate()
@@ -40,8 +40,6 @@ public class Enemy : MonoBehaviour
         _currentCooldown -= _fixedDeltaTime;
         if(_currentCooldown <= 0.0f)
         {
-            //Debug.Log("enemy shoot");
-            //OnShoot();
             Attack();
               _currentCooldown = _cooldown;
 

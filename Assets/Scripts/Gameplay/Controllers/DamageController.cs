@@ -4,32 +4,44 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    event Action<Collider> OnCollideEvent;
-    private List<WeaponComponent> _weaponComponents;
+    [SerializeField]
+    private GameObject _applicationSceneManagerGO;
+    private ISceneManager sceneManager;
 
-    public void AddToList(WeaponComponent weaponComponent)
+
+    private void Awake()
     {
-        //Debug.Log("add");
-        //Debug.Log(weaponComponent.name);
-        //this._weaponComponents.Add(weaponComponent);
+        this.sceneManager = this._applicationSceneManagerGO.GetComponent<ISceneManager>();
+    }
+    public void Subscribe(WeaponComponent weaponComponent)
+    {     
         weaponComponent.OnCollideEvent += ProcessDamageEvent;
         
     }
-    public void DeleteFromList(WeaponComponent weaponComponent)
-    {
-        //Debug.Log("delete");
-        //this._weaponComponents.Add(weaponComponent);
-        weaponComponent.OnCollideEvent -= ProcessDamageEvent;
-       
+    public void UnSubscribe(WeaponComponent weaponComponent)
+    {    
+        weaponComponent.OnCollideEvent -= ProcessDamageEvent;      
     }
-    private void ProcessDamageEvent(Collider collider)
+    private void ProcessDamageEvent(Collider collider, int damage)
     {
-        if(collider.TryGetComponent(out HitPointsComponent component))
+        //Debug.Log("debug throw DamageController");
+        if (collider.TryGetComponent(out HitPointsComponent component))
         {
-
+            float target_HP = collider.GetComponent<HitPointsComponent>().GetDamage(damage);
+            if (target_HP <= 0)
+            {
+                if (collider.CompareTag("Player"))
+                {
+                    this.sceneManager.LoadSceneAsync("GameMainMenu3");
+                }
+                else
+                {
+                    Destroy(collider.gameObject);
+                }
+            }
         }
     }
+
 }
 
 

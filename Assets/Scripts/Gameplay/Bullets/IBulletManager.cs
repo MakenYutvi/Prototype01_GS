@@ -4,7 +4,7 @@ using UnityEngine;
 
     public interface IBulletManager
     {
-    event Action<Collider> OnCollideEvent;
+    //event Action<Collider> OnCollideEvent;
     void LaunchBullet(Vector3 position, Quaternion rotation, Vector3 direction, IBulletListener listener = null);
     }
 

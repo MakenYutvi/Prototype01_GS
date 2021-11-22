@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314cebd89e71a3840a68cc03a5820cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 5
   _damageController: {fileID: 931048768}
 --- !u!4 &61231816
 Transform:
@@ -603,7 +604,6 @@ MonoBehaviour:
     bulletPrefab: {fileID: -6900781968273268039, guid: 2dda8a2b6149b064da57290a66f51471, type: 3}
     bulletContainer: {fileID: 901800814}
     config: {fileID: 11400000, guid: 4b29328081f5e174f9ec89c736244948, type: 2}
-  sceneManagerGO: {fileID: 1712770666}
 --- !u!1 &595774310
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1a58fddbbe58447a5361c4f97a80e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _applicationSceneManagerGO: {fileID: 1712770666}
 --- !u!4 &985846227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 616437573736244106, guid: 4b7494f941c4dc74db765da9b656c8b0, type: 3}

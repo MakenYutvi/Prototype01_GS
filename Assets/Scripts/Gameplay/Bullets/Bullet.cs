@@ -5,7 +5,6 @@ using Zenject;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
     private float _lifeTime;
     private float _speed;
     private IHandler _handler;
@@ -33,7 +32,6 @@ public class Bullet : MonoBehaviour
         this._fixedDeltaTime = Time.fixedDeltaTime;
     }
     public bool Move()
-   // void Update()
     {
         if (this._lifeTime > 0)
         {
@@ -41,7 +39,6 @@ public class Bullet : MonoBehaviour
             this._lifeTime -= _fixedDeltaTime;
             return true;
         }
-
         return false;
     }
 
@@ -53,7 +50,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this._handler.OnBulletCollided(this, other);
-        //Debug.Log("collder:" + other);
     }
 
     public interface IHandler

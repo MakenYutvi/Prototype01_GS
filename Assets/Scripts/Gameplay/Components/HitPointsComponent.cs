@@ -16,12 +16,6 @@ public class HitPointsComponent : MonoBehaviour
         _healthBar.text = _hp.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public float GetDamage(float hitPoints)
     {
         _hp = Mathf.Max(0, _hp - hitPoints);
