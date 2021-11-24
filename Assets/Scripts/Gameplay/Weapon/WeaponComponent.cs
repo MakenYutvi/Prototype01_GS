@@ -7,8 +7,8 @@ public class WeaponComponent : MonoBehaviour, IBulletListener
 {
     [SerializeField]
     private int _damage = 5;//задел на будущее
-    [SerializeField]
-    private DamageController _damageController;
+    //[SerializeField]
+    private IDamageController _damageController;
 
     private IBulletManager _BulletManager;
     public event ActionWeapon<Collider> OnCollideEvent;
@@ -18,7 +18,11 @@ public class WeaponComponent : MonoBehaviour, IBulletListener
     {
         _BulletManager = bulletManager;
     }
-
+    [Inject]
+    public void Construct(IDamageController damageController)
+    {
+        _damageController = damageController;
+    }
     private void OnEnable()
     {
         _damageController.Subscribe(this);
