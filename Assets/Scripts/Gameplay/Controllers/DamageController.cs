@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageController : MonoBehaviour
+public class DamageController : MonoBehaviour, IDamageController
 {
-    [SerializeField]
-    private GameObject _applicationSceneManagerGO;
-    private ISceneManager sceneManager;
 
 
-    private void Awake()
-    {
-        this.sceneManager = this._applicationSceneManagerGO.GetComponent<ISceneManager>();
-    }
+    public event Action<bool> IsPlayerDied;
+
     public void Subscribe(WeaponComponent weaponComponent)
     {     
         weaponComponent.OnCollideEvent += ProcessDamageEvent;
@@ -32,7 +27,7 @@ public class DamageController : MonoBehaviour
             {
                 if (collider.CompareTag("Player"))
                 {
-                    this.sceneManager.LoadSceneAsync("GameMainMenu3");
+                    IsPlayerDied?.Invoke(true);
                 }
                 else
                 {

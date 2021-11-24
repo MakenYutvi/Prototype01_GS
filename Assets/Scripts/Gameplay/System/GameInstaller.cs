@@ -20,6 +20,9 @@ public class GameInstaller : MonoInstaller
 
         Container.Bind<IWeaponManager>()
             .To<WeaponManager>().FromComponentInHierarchy().AsCached();
+        
+        Container.Bind<IDamageController>()
+            .To<DamageController>().FromComponentInHierarchy().AsCached();
 
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }
