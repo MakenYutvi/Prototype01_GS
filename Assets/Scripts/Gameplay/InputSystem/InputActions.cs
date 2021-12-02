@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Player/InputSystem/InputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Gameplay/InputSystem/InputActions.inputactions'
 
 using System;
 using System.Collections;
@@ -790,6 +790,52 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Camera"",
+            ""id"": ""0dc91a13-f9bd-4c8a-aa1a-c4a7158195db"",
+            ""actions"": [
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""8c58c856-7793-416d-8b39-b40f46dc0457"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ZoomWheel"",
+                    ""type"": ""Value"",
+                    ""id"": ""47b2cce6-73aa-4d9f-b988-64356f7deb58"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ef4c7b8a-0cd2-4ac5-bc6f-04c94e3b8615"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""937ff2a9-61d6-4326-b1bd-119c0b865c19"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""ZoomWheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -873,6 +919,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Camera
+        m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
+        m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
+        m_Camera_ZoomWheel = m_Camera.FindAction("ZoomWheel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1080,6 +1130,47 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Camera
+    private readonly InputActionMap m_Camera;
+    private ICameraActions m_CameraActionsCallbackInterface;
+    private readonly InputAction m_Camera_Zoom;
+    private readonly InputAction m_Camera_ZoomWheel;
+    public struct CameraActions
+    {
+        private @PlayerInput m_Wrapper;
+        public CameraActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
+        public InputAction @ZoomWheel => m_Wrapper.m_Camera_ZoomWheel;
+        public InputActionMap Get() { return m_Wrapper.m_Camera; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CameraActions set) { return set.Get(); }
+        public void SetCallbacks(ICameraActions instance)
+        {
+            if (m_Wrapper.m_CameraActionsCallbackInterface != null)
+            {
+                @Zoom.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
+                @ZoomWheel.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoomWheel;
+                @ZoomWheel.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoomWheel;
+                @ZoomWheel.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoomWheel;
+            }
+            m_Wrapper.m_CameraActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
+                @ZoomWheel.started += instance.OnZoomWheel;
+                @ZoomWheel.performed += instance.OnZoomWheel;
+                @ZoomWheel.canceled += instance.OnZoomWheel;
+            }
+        }
+    }
+    public CameraActions @Camera => new CameraActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1144,5 +1235,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface ICameraActions
+    {
+        void OnZoom(InputAction.CallbackContext context);
+        void OnZoomWheel(InputAction.CallbackContext context);
     }
 }
