@@ -388,8 +388,59 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Gameplay" t="Include">
+            <e p="Bullets" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="BulletConfig.cs" t="Include" />
+              <e p="BulletManager.cs" t="Include" />
+              <e p="IBulletListener.cs" t="Include" />
+              <e p="IBulletManager.cs" t="Include" />
+            </e>
+            <e p="Camera" t="Include">
+              <e p="State" t="Include">
+                <e p="CameraState.cs" t="Include" />
+                <e p="CameraState_Cutscene.cs" t="Include" />
+                <e p="CameraState_ThirdPerson.cs" t="Include" />
+                <e p="CameraStateId.cs" t="Include" />
+                <e p="ICameraState.cs" t="Include" />
+              </e>
+              <e p="StateManager" t="Include">
+                <e p="CameraStateManager.cs" t="Include" />
+                <e p="ICameraStateManager.cs" t="Include" />
+              </e>
+              <e p="TestCamera.cs" t="Include" />
+            </e>
+            <e p="Components" t="Include">
+              <e p="AttackComponent.cs" t="Include" />
+              <e p="HitPointsComponent.cs" t="Include" />
+              <e p="MovementComponent.cs" t="Include" />
+            </e>
+            <e p="Controllers" t="Include">
+              <e p="DamageController.cs" t="Include" />
+              <e p="IDamageController.cs" t="Include" />
+            </e>
+            <e p="Enemies" t="Include">
+              <e p="Enemy.cs" t="Include" />
+            </e>
+            <e p="InputSystem" t="Include">
+              <e p="InputActions.cs" t="Include" />
+              <e p="InputController.cs" t="Include" />
+            </e>
+            <e p="System" t="Include">
+              <e p="GameInstaller.cs" t="Include" />
+            </e>
+            <e p="Utility" t="Include">
+              <e p="Action.cs" t="Include" />
+            </e>
+            <e p="Weapon" t="Include">
+              <e p="IWeaponManager1.cs" t="Include" />
+              <e p="WeaponComponent.cs" t="Include" />
+              <e p="WeaponManager.cs" t="Include" />
+            </e>
+          </e>
           <e p="Scenes" t="Include">
             <e p="ApplicationSceneManager.cs" t="Include" />
+            <e p="SceneController.cs" t="Include" />
             <e p="UnitySceneManager.cs" t="Include" />
           </e>
           <e p="UI" t="Include">

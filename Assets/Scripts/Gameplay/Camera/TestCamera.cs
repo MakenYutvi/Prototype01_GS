@@ -7,14 +7,15 @@ using Zenject;
 public class TestCamera : MonoBehaviour
 {
     [SerializeField]
-    private CameraController _cameraController;
+    private CameraStateId stateId;
+    
     [SerializeField]
     private Button _button;
 
-    private ICameraManager _cameraManager;
+    private ICameraStateManager _cameraManager;
 
     [Inject]
-    public void Construct(ICameraManager cameraManager)
+    public void Construct(ICameraStateManager cameraManager)
     {
         _cameraManager = cameraManager;
     }
@@ -31,8 +32,6 @@ public class TestCamera : MonoBehaviour
 
     private void OnButtonClicked()
     {
-        this._cameraManager.SetCameraController(_cameraController);
+        this._cameraManager.SetState(this.stateId);
     }
-
-
 }

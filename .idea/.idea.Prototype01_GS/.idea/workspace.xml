@@ -20,10 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cf20b4b-e3cb-4daf-9595-05e72040a32a" name="Default Changelist" comment="Запилил Popup Manager">
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/CounterWidget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraStateId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraStateId.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_Cutscene.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_Cutscene.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_ThirdPerson.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/ICameraState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/CameraStateManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/ICameraStateManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/ICameraStateManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prototype01_GS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraControllerFollowPerson.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraControllerFollowPerson.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/CameraStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/ICameraState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/IsCameraZoomable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/IsCameraZoomable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/TestCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/TestCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/System/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/System/GameInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +63,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/ICameraStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.11/Runtime/Core/CameraState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_ThirdPerson.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/igor_gulkin/Desktop/Prototype01_GS/Assets/Igor/Scripts/IPopupManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraStateId.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/IPopupManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/CameraStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,6 +109,23 @@
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/Implementations/ButtonNext.cs" />
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/PopupEventBus.cs" />
         <option value="$PROJECT_DIR$/Assets/Igor/Scripts/PopupSystem/Popup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/ICameraState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraControllerFollowPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraStateType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/ICameraStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraStateFollowPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraStateId.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/System/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/CameraState_ThirdPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/StateManager/CameraStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_Cutscene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/InputSystem/InputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/State/CameraState_ThirdPerson.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Camera/TestCamera.cs" />
       </list>
     </option>
   </component>
@@ -127,6 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636215293228</updated>
       <workItem from="1636215331744" duration="12625000" />
+      <workItem from="1638903336172" duration="4734000" />
     </task>
     <task id="LOCAL-00001" summary="Пилим Popup Manager">
       <created>1636220830357</created>
@@ -160,6 +208,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -168,18 +217,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Запилил Popup Manager" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="494" y="127" key="RiderGenerateDialog" timestamp="1636226640042">
+    <state x="494" y="127" key="RiderGenerateDialog" timestamp="1638904202124">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="494" y="127" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1636226640042" />
+    <state x="494" y="127" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1638904202124" />
     <state x="443" y="163" key="RollbackChangesDialog" timestamp="1636221685327">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="163" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1636221685327" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1636226481116">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1638908781431">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1636226481116" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1638908781431" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1636218586247">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
