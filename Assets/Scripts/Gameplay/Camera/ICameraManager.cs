@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ICameraManager 
 {
     public void ZoomDescrete();
-    public void ActivateCameraSystem(CameraSystemComponent cameraSystemComponent);
+    public void SetCameraController(CameraController cameraController);
 }

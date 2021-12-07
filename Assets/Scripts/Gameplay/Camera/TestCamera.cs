@@ -7,7 +7,7 @@ using Zenject;
 public class TestCamera : MonoBehaviour
 {
     [SerializeField]
-    private CameraSystemComponent _cameraSystemComponent;
+    private CameraController _cameraController;
     [SerializeField]
     private Button _button;
 
@@ -31,7 +31,7 @@ public class TestCamera : MonoBehaviour
 
     private void OnButtonClicked()
     {
-        this._cameraManager.ActivateCameraSystem(_cameraSystemComponent);
+        this._cameraManager.SetCameraController(_cameraController);
     }
 
 

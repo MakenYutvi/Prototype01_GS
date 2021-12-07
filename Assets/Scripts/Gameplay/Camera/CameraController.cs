@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
-    private CameraZoom _cameraZoom;
+    protected private CinemachineVirtualCamera _cameraNear;
+    [SerializeField]
+    protected private CinemachineVirtualCamera _cameraFar;
 
-    public void Zoom()
-    {
-       // _cameraZoom.ChangeZoom();
-        _cameraZoom.ChangeZoom2(3.82f, 7.2f);
-    }
+
+  
+
 }

@@ -5,36 +5,41 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour, ICameraManager
 {
     [SerializeField]
-    public CameraSystemComponent _activeCameraSystemComponent;
+    public CameraController _activeCameraController;
 
     [SerializeField]
-    public List<CameraSystemComponent> _cameraSystemList;
+    public List<CameraController> _cameraControllersList;
 
     private void Start()
     {
-        foreach( var CameraSystem in _cameraSystemList)
+        foreach( var CameraSystem in _cameraControllersList)
         {
-            if(CameraSystem != _activeCameraSystemComponent)
+            if(CameraSystem != _activeCameraController)
                 CameraSystem.gameObject.SetActive(false);
         }
     }
     public void ZoomDescrete()
     {
-        _activeCameraSystemComponent.ZoomDescrete();
+        //_activeCameraController.ZoomDescrete();
+        var cameraZoomableComponent = _activeCameraController.gameObject.GetComponent<IsCameraZoomable>();
+        if (cameraZoomableComponent != null)
+        {
+            cameraZoomableComponent.Zoom();
+        }
     }
 
-    public void ActivateCameraSystem(CameraSystemComponent cameraSystemComponent)
+    public void SetCameraController(CameraController cameraSystemComponent)
     {
-        if (cameraSystemComponent == _activeCameraSystemComponent)
+        if (cameraSystemComponent == _activeCameraController)
             return;
 
-        var prevActiveCameraSystemComponent = _activeCameraSystemComponent;
-        foreach (var CameraSystem in _cameraSystemList)
+        var prevActiveCameraSystemComponent = _activeCameraController;
+        foreach (var CameraSystem in _cameraControllersList)
         {
             if (cameraSystemComponent == CameraSystem)
             {
                 CameraSystem.gameObject.SetActive(true);
-                _activeCameraSystemComponent = CameraSystem;
+                _activeCameraController = CameraSystem;
             }
 
             if (prevActiveCameraSystemComponent == CameraSystem)//turn off previous camera
