@@ -24,8 +24,8 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IDamageController>()
             .To<DamageController>().FromComponentInHierarchy().AsCached();
         
-        Container.Bind<ICameraManager>()
-            .To<CameraManager>().FromComponentInHierarchy().AsCached();
+        Container.Bind<ICameraStateManager>()
+            .To<CameraStateManager>().FromComponentInHierarchy().AsCached();
 
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }
