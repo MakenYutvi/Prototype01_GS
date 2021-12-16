@@ -6,5 +6,9 @@ public interface ILevelManager
     public void AddExperience(int amount);
     public int GetLevel();
     public float GetExperienceNormalized();
+    public int GetExperience();
+    public int GetExperienceForNextLevel(int level);
+
+    public bool IsMaxLevel(int level);
 
 }

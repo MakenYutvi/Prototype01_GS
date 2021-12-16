@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90815272cd6f8214398118c18c4fcc0f, type: 3}
   m_Name: LevelSettingsData
   m_EditorClassIdentifier: 
-  _experienceAmount: 
+  _experienceAmountForLevel: 64000000780000008c00000096000000a0000000aa000000b4000000c8000000dc0000002c010000

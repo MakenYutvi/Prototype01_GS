@@ -40,11 +40,25 @@ public class LevelManager : MonoBehaviour, ILevelManager
         return _level;
     }
 
+    public int GetExperience()
+    {
+        return _experience;
+    }
+
+    public int GetExperienceForNextLevel(int level)
+    {
+        return _levelSettings.ExperienceForNextLevel(level);
+    }
     public float GetExperienceNormalized()
     {
         if (_levelSettings.IsMaxLevel(_level))
             return 1.0f;
         else
             return (float) _experience / _levelSettings.ExperienceForNextLevel(_level);
+    }
+
+    public bool IsMaxLevel(int level)
+    {
+        return _levelSettings.IsMaxLevel(level);
     }
 }
