@@ -21,7 +21,7 @@ public sealed class CameraState_ThirdPerson : CameraState
 
     public override void OnEnter()
     {
-        Debug.Log("THIRD PERSON ENTER");
+        //Debug.Log("THIRD PERSON ENTER");
         _playerInput.Camera.Zoom.performed += this.OnZoom;
         _playerInput.Enable();
         _cameraNear.enabled = true;
@@ -30,7 +30,7 @@ public sealed class CameraState_ThirdPerson : CameraState
 
     public override void OnExit()
     {
-        Debug.Log("THIRD PERSON EXIT");
+        //Debug.Log("THIRD PERSON EXIT");
         _playerInput.Camera.Zoom.performed -= this.OnZoom;
         _playerInput.Disable();
         _cameraNear.enabled = false;
@@ -39,7 +39,7 @@ public sealed class CameraState_ThirdPerson : CameraState
 
     public void OnZoom(InputAction.CallbackContext obj)
     {
-        Debug.Log("ON ZOOM");
+        //Debug.Log("ON ZOOM");
         var prioruty = _cameraFar.Priority;
         if (_cameraFar.Priority != _cameraNear.Priority)
         {

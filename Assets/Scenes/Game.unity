@@ -266,6 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34488228}
+  - component: {fileID: 34488229}
   m_Layer: 0
   m_Name: SkillTree
   m_TagString: Untagged
@@ -294,6 +295,30 @@ RectTransform:
   m_AnchoredPosition: {x: -1920, y: -1836}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &34488229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34488227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d958d5dbad1f0b844be2ac41576d2a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonSkills:
+  - button: {fileID: 63591793}
+    skillName: 1
+  - button: {fileID: 1943314829}
+    skillName: 2
+  - button: {fileID: 2027402834}
+    skillName: 4
+  - button: {fileID: 1207713302}
+    skillName: 3
+  - button: {fileID: 41555849}
+    skillName: 5
+  _avaliableSkillsValue: {fileID: 350095130}
 --- !u!1 &41555847
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +544,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.88554645, g: 0.9433962, b: 0.88595384, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1031,7 +1056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SP2
+  m_text: MN2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1959,6 +1984,7 @@ Transform:
   - {fileID: 931048767}
   - {fileID: 1977642070}
   - {fileID: 1982928637}
+  - {fileID: 1880334783}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2122,7 +2148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SP1
+  m_text: MN1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3885,7 +3911,7 @@ GameObject:
   - component: {fileID: 1207713303}
   - component: {fileID: 1207713302}
   m_Layer: 0
-  m_Name: Speed1
+  m_Name: Mana1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6063,6 +6089,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1880334782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880334783}
+  - component: {fileID: 1880334784}
+  m_Layer: 0
+  m_Name: SkillController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1880334783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880334782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 595774311}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880334784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880334782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579a3a90a11787a40a5fd05b8382961a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillsSettings: {fileID: 11400000, guid: ea682a33f078cd84e8c9e8faa6815ed8, type: 2}
 --- !u!1 &1914567852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,7 +6640,7 @@ GameObject:
   - component: {fileID: 2027402835}
   - component: {fileID: 2027402834}
   m_Layer: 0
-  m_Name: Speed2
+  m_Name: Mana2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,6 +34,10 @@ public class LevelSettings : ScriptableObject
     {
         return _levelsSettings.Count <= level;
     }
+    public int GetSkillPointsForLevel(int level)
+    {
+        return _levelsSettings.Find(x => x.level == level).skillPoints;
+    }
 
     [Serializable]
     private struct LevelSetting

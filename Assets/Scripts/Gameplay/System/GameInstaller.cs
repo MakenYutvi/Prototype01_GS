@@ -29,6 +29,9 @@ public class GameInstaller : MonoInstaller
         
         Container.Bind<ILevelManager>()
             .To<LevelManager>().FromComponentInHierarchy().AsCached();
+        
+        Container.Bind<ISkillController>()
+            .To<SkillController>().FromComponentInHierarchy().AsCached();
 
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }

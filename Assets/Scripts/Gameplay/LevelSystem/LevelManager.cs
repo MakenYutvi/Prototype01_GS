@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour, ILevelManager
     private LevelSettings _levelSettings;
     public event Action<int> isLevelChanged;
     public event Action<float> isExperienceChanged;
+    public event Action<int> isAddSkills;
 
     private int _level;
     private int _experience;
@@ -29,6 +30,7 @@ public class LevelManager : MonoBehaviour, ILevelManager
         {
             _level++;
             isLevelChanged?.Invoke(_level);
+            isAddSkills?.Invoke(_level);
             _experience -= _levelSettings.ExperienceForNextLevel(_level);
             
         }

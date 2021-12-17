@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd98b84e1b826842ad9c4b10e42e496, type: 3}
+  m_Name: SkillSettingsData
+  m_EditorClassIdentifier: 
+  _skillsList:
+  - skillName: 1
+    requireSkills: 
+    requireLevel: 1
+    cost: 1
+  - skillName: 2
+    requireSkills: 01000000
+    requireLevel: 2
+    cost: 2
+  - skillName: 3
+    requireSkills: 
+    requireLevel: 1
+    cost: 1
+  - skillName: 4
+    requireSkills: 03000000
+    requireLevel: 2
+    cost: 2
+  - skillName: 5
+    requireSkills: 0200000004000000
+    requireLevel: 5
+    cost: 5
+  _activeSkills: 0100000002000000030000000400000005000000
