@@ -13,3 +13,34 @@ MonoBehaviour:
   m_Name: LevelSettingsData
   m_EditorClassIdentifier: 
   _experienceAmountForLevel: 64000000780000008c00000096000000a0000000aa000000b4000000c8000000dc0000002c010000
+  _levelsSettings:
+  - level: 1
+    experienceForNextLevel: 100
+    skillPoints: 1
+  - level: 2
+    experienceForNextLevel: 120
+    skillPoints: 1
+  - level: 3
+    experienceForNextLevel: 140
+    skillPoints: 1
+  - level: 4
+    experienceForNextLevel: 150
+    skillPoints: 1
+  - level: 5
+    experienceForNextLevel: 160
+    skillPoints: 1
+  - level: 6
+    experienceForNextLevel: 170
+    skillPoints: 1
+  - level: 7
+    experienceForNextLevel: 180
+    skillPoints: 2
+  - level: 8
+    experienceForNextLevel: 200
+    skillPoints: 2
+  - level: 9
+    experienceForNextLevel: 220
+    skillPoints: 2
+  - level: 10
+    experienceForNextLevel: 300
+    skillPoints: 10
