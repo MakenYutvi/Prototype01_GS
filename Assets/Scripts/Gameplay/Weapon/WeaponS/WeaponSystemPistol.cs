@@ -20,6 +20,7 @@ public sealed class WeaponSystemPistol : WeaponState
     {
         _weaponComponents.ForEach(w => w.Attack());
         Debug.Log("Pistol Attack");
+        Debug.Log("Pistol Attack2");
     }
 
     public override void OnActivate()

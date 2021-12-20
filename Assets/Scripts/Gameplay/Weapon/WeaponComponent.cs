@@ -41,7 +41,7 @@ public class WeaponComponent : WeaponComponentBase, IBulletListener
     public override void Attack()
     {  
         //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 1000);       
-        _BulletManager.LaunchBullet(this.transform.position + 6*_firePoint.transform.forward, this.transform.rotation, _firePoint.transform.forward, this);
+        _BulletManager.LaunchBullet(this.transform.position + _firePoint.transform.forward, this.transform.rotation, _firePoint.transform.forward, this);
     }
 
     public void OnBulletCollided(Collider collider)

@@ -50,6 +50,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this._handler.OnBulletCollided(this, other);
+        //Debug.Log("OnTriggerEnter:" + other);
     }
 
     public interface IHandler
