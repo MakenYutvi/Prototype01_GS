@@ -13,7 +13,7 @@ public class UISkillTree : MonoBehaviour
     [SerializeField]
     private TMP_Text _avaliableSkillsValue;
 
-    private int _availableSkills;
+    private int _availableSkillPoints;
 
     private ISkillController _skillController;
 
@@ -25,8 +25,8 @@ public class UISkillTree : MonoBehaviour
     private void Start()
     {
         _skillController.IsSkillPointsChanged += SkillsPointUpdate;
-        _availableSkills = 0;
-        _avaliableSkillsValue.text = _availableSkills.ToString();
+        _availableSkillPoints = 0;
+        _avaliableSkillsValue.text = _availableSkillPoints.ToString();
         //var ActiveSkills = _skillController.GetActiveSpells();
         //foreach(var skill in ActiveSkills)
         //{
@@ -68,8 +68,8 @@ public class UISkillTree : MonoBehaviour
     }
     private void SkillsPointUpdate(int amount)
     {
-        _availableSkills += amount;
-        _avaliableSkillsValue.text = _availableSkills.ToString();
+        _availableSkillPoints += amount;
+        _avaliableSkillsValue.text = _availableSkillPoints.ToString();
     }
 
     [Serializable]

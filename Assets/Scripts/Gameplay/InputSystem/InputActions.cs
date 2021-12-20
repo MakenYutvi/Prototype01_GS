@@ -49,6 +49,30 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""WeaponState1"",
+                    ""type"": ""Button"",
+                    ""id"": ""a136bb9b-2f6a-4d86-83ac-998dedf4e346"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""WeaponState2"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1625b83-55f9-406f-b7fc-38ba964a362e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""WeaponState3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0baefcd0-14b4-4f83-819e-bc5b423eb6e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -280,6 +304,39 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Cursor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b49070e7-98ba-4bb7-998d-70d732b250a4"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""WeaponState1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e297bb2-9e62-47ee-be46-8e269a3abdc1"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""WeaponState2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b968b980-7b27-4a33-b97d-94024ece3103"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""WeaponState3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -907,6 +964,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Cursor = m_Player.FindAction("Cursor", throwIfNotFound: true);
+        m_Player_WeaponState1 = m_Player.FindAction("WeaponState1", throwIfNotFound: true);
+        m_Player_WeaponState2 = m_Player.FindAction("WeaponState2", throwIfNotFound: true);
+        m_Player_WeaponState3 = m_Player.FindAction("WeaponState3", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -976,6 +1036,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Cursor;
+    private readonly InputAction m_Player_WeaponState1;
+    private readonly InputAction m_Player_WeaponState2;
+    private readonly InputAction m_Player_WeaponState3;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -984,6 +1047,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Cursor => m_Wrapper.m_Player_Cursor;
+        public InputAction @WeaponState1 => m_Wrapper.m_Player_WeaponState1;
+        public InputAction @WeaponState2 => m_Wrapper.m_Player_WeaponState2;
+        public InputAction @WeaponState3 => m_Wrapper.m_Player_WeaponState3;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1005,6 +1071,15 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Cursor.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursor;
                 @Cursor.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursor;
                 @Cursor.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursor;
+                @WeaponState1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState1;
+                @WeaponState1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState1;
+                @WeaponState1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState1;
+                @WeaponState2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState2;
+                @WeaponState2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState2;
+                @WeaponState2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState2;
+                @WeaponState3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
+                @WeaponState3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
+                @WeaponState3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1021,6 +1096,15 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Cursor.started += instance.OnCursor;
                 @Cursor.performed += instance.OnCursor;
                 @Cursor.canceled += instance.OnCursor;
+                @WeaponState1.started += instance.OnWeaponState1;
+                @WeaponState1.performed += instance.OnWeaponState1;
+                @WeaponState1.canceled += instance.OnWeaponState1;
+                @WeaponState2.started += instance.OnWeaponState2;
+                @WeaponState2.performed += instance.OnWeaponState2;
+                @WeaponState2.canceled += instance.OnWeaponState2;
+                @WeaponState3.started += instance.OnWeaponState3;
+                @WeaponState3.performed += instance.OnWeaponState3;
+                @WeaponState3.canceled += instance.OnWeaponState3;
             }
         }
     }
@@ -1222,6 +1306,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnCursor(InputAction.CallbackContext context);
+        void OnWeaponState1(InputAction.CallbackContext context);
+        void OnWeaponState2(InputAction.CallbackContext context);
+        void OnWeaponState3(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

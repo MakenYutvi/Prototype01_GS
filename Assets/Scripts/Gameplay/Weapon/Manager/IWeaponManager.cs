@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWeaponManager
 {
-    public void Attack(Vector3 direction);
+    public void SetState(WeaponStateID stateId);
 }

@@ -7,7 +7,7 @@ public class CameraStateManager : MonoBehaviour, ICameraStateManager
     [SerializeField]
     private CameraStateId stateId;
 
-    private ICameraState state;
+    private CameraState state;
 
     [SerializeField]
     private List<StateInfo> states;

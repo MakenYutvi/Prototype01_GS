@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackComponent : MonoBehaviour
+public class AttackComponent : MonoBehaviour, IAtackComponent
 {
-    [SerializeField]
-    private WeaponComponent _weaponComponent;
+   // [SerializeField]
+    //private WeaponComponent _weaponComponent;
 
+    public event Action OnAttack;
 
     public void Attack(Ray ray)
     {
@@ -26,6 +27,8 @@ public class AttackComponent : MonoBehaviour
             //Debug.DrawRay(this.transform.position, direction * 100, Color.green, 1000);
         }
 
-        _weaponComponent.Attack(direction);
+        //_weaponComponent.Attack(direction);
+        OnAttack?.Invoke();
+        Debug.Log("AttackComponent");
     }
 }
