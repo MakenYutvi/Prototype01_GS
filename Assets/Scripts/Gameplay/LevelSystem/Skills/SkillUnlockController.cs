@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class SkillController : MonoBehaviour, ISkillController
+public class SkillUnlockController : MonoBehaviour, ISkillController
 {
     [SerializeField]
     private SkillsSettings _skillsSettings;

@@ -37,7 +37,7 @@ public class GameInstaller : MonoInstaller
             .To<ISkillPointManager>().FromComponentInHierarchy().AsCached();
         
         Container.Bind<ISkillController>()
-            .To<SkillController>().FromComponentInHierarchy().AsCached();
+            .To<SkillUnlockController>().FromComponentInHierarchy().AsCached();
         
         Container.Bind<IAtackComponent>()
             .To<AttackComponent>().FromComponentInHierarchy().AsCached();
