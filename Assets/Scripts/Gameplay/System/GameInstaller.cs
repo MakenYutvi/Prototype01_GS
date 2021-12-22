@@ -29,12 +29,21 @@ public class GameInstaller : MonoInstaller
         
         Container.Bind<ILevelManager>()
             .To<LevelManager>().FromComponentInHierarchy().AsCached();
+
+        Container.Bind<IExperienceManager>()
+            .To<ExperienceManager>().FromComponentInHierarchy().AsCached();
+
+        Container.Bind<ISkillPointManager>()
+            .To<ISkillPointManager>().FromComponentInHierarchy().AsCached();
         
         Container.Bind<ISkillController>()
             .To<SkillController>().FromComponentInHierarchy().AsCached();
         
         Container.Bind<IAtackComponent>()
             .To<AttackComponent>().FromComponentInHierarchy().AsCached();
+        
+        Container.Bind<IExperienceControllerUI>()
+            .To<ExperienceControllerUI>().FromComponentInHierarchy().AsCached();
 
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }

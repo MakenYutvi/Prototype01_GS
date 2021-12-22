@@ -9,6 +9,7 @@ public class SkillController : MonoBehaviour, ISkillController
     [SerializeField]
     private SkillsSettings _skillsSettings;
     private ILevelManager _levelManager;
+    private ISkillPointManager _skillPointManager;
 
     private int _playerLevel;
 
@@ -19,11 +20,16 @@ public class SkillController : MonoBehaviour, ISkillController
     {
         _levelManager = levelManager;
     }
+    [Inject]
+    public void Construct(ISkillPointManager skillPointManager)
+    {
+        _skillPointManager = skillPointManager;
+    }
 
     private void Start()
     {
-        _levelManager.isAddSkills += AddSkillPoints;
-        _levelManager.isLevelChanged += LevelUp;
+        _skillPointManager.OnSkillPointsChanged += AddSkillPoints;
+        _levelManager.OnLevelChanged += LevelUp;
         _skillsSettings.ClearActiveSkills();
     }
 

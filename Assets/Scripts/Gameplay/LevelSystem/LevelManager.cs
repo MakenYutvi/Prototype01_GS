@@ -1,66 +1,41 @@
 using System.Collections;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour, ILevelManager
+public class LevelManager : MonoBehaviour,  ILevelManager
 {
-
     [SerializeField]
     private LevelSettings _levelSettings;
-    public event Action<int> isLevelChanged;
-    public event Action<float> isExperienceChanged;
-    public event Action<int> isAddSkills;
 
-    private int _level;
-    private int _experience;
+    [SerializeField]//for test
+    private int _level = 1;
 
-    private void Awake()
+    public event Action<int> OnLevelChanged;
+
+    
+    public int ChangeLevel()
     {
-        _level = 1;
-        _experience = 0;
-    }
-    public void AddExperience(int amount)
-    {
-        if (_levelSettings.IsMaxLevel(_level))
-            return;
-
-        _experience += amount;
-        while (_experience >= _levelSettings.ExperienceForNextLevel(_level) && !_levelSettings.IsMaxLevel(_level))
+        if (IsMaxLevel())
+        {
+            return _level;
+        }
+        else
         {
             _level++;
-            isLevelChanged?.Invoke(_level);
-            isAddSkills?.Invoke(_level);
-            _experience -= _levelSettings.ExperienceForNextLevel(_level);
-            
+            OnLevelChanged?.Invoke(_level);
+            return _level;
         }
-        isExperienceChanged?.Invoke(GetExperienceNormalized());
+
+        
     }
 
-    public int GetLevel()
+    public int GetCurrentLevel()
     {
         return _level;
     }
 
-    public int GetExperience()
+    public bool IsMaxLevel()
     {
-        return _experience;
-    }
-
-    public int GetExperienceForNextLevel(int level)
-    {
-        return _levelSettings.ExperienceForNextLevel(level);
-    }
-    public float GetExperienceNormalized()
-    {
-        if (_levelSettings.IsMaxLevel(_level))
-            return 1.0f;
-        else
-            return (float) _experience / _levelSettings.ExperienceForNextLevel(_level);
-    }
-
-    public bool IsMaxLevel(int level)
-    {
-        return _levelSettings.IsMaxLevel(level);
+        return _levelSettings.IsMaxLevel(_level);
     }
 }

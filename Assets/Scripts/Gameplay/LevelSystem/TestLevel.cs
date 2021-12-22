@@ -14,12 +14,12 @@ public class TestLevel : MonoBehaviour
     [SerializeField]
     private Button _button500Xp;
 
-    private ILevelManager _levelManager;
+    private IExperienceManager _experienceManager;
 
     [Inject]
-    public void Construct(ILevelManager levelManager)
+    public void Construct(IExperienceManager experienceManager)
     {
-        _levelManager = levelManager;
+        _experienceManager = experienceManager;
     }
 
     private void OnEnable()
@@ -38,15 +38,15 @@ public class TestLevel : MonoBehaviour
 
     private void AddExperience50()
     {
-        _levelManager.AddExperience(50);
+        _experienceManager.AddExperience(50);
     }
      private void AddExperience150()
     {
-        _levelManager.AddExperience(150);
+        _experienceManager.AddExperience(150);
     }
      private void AddExperience500()
     {
-        _levelManager.AddExperience(500);
+        _experienceManager.AddExperience(500);
     }
 
 }
