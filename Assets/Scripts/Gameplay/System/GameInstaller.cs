@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Zenject;
+using Otus.InventoryModule;
 
 public class GameInstaller : MonoInstaller
 {
@@ -43,7 +44,10 @@ public class GameInstaller : MonoInstaller
             .To<AttackComponent>().FromComponentInHierarchy().AsCached();
         
         Container.Bind<IExperienceControllerUI>()
-            .To<ExperienceControllerUI>().FromComponentInHierarchy().AsCached();
+            .To<ExperienceControllerUI>().FromComponentInHierarchy().AsCached(); 
+
+        Container.Bind<IInventoryItemManager>()
+            .To<InventoryItemManager>().FromComponentInHierarchy().AsCached();
 
         //Container.Bind<Enemy>().AsSingle().NonLazy();
     }
