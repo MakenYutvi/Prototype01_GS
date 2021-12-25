@@ -44,4 +44,4 @@ public class BulletsCounterControllerUI : MonoBehaviour
         _bulletsCounterUI.SetBulletsInInventary(countInInventory.ToString());
     }
 }
-//test 
+//test 123
