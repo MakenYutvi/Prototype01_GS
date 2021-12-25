@@ -23,7 +23,7 @@ public class BulletsCounterControllerUI : MonoBehaviour
         }
     }
 
-    private void OnWeaponReloadControllerDisabled()//костыль
+    private void OnWeaponReloadControllerDisabled()//???????
     {
         _bulletsCounterUI.SetTypeOfBullets("Knife");
         _bulletsCounterUI.SetCurrentBulletsInClipSize(" ");
@@ -44,3 +44,4 @@ public class BulletsCounterControllerUI : MonoBehaviour
         _bulletsCounterUI.SetBulletsInInventary(countInInventory.ToString());
     }
 }
+//test 
