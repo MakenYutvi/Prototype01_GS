@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ECS
@@ -8,7 +5,7 @@ namespace ECS
     public class AttackInputController : MonoBehaviour
     {
         [SerializeField]
-        private Entity _playerEntity;
+        private MonoEntity _playerEntity;
 
         private PlayerInput _playerInput;
         public event Action OnAttack;
@@ -16,17 +13,15 @@ namespace ECS
         {
             _playerInput = new PlayerInput();
             _playerInput.Player.Fire.performed += context => Attack();
-           
         }
-
 
         private void Attack()
         {
             OnAttack?.Invoke();
             Debug.Log("debug: attack AttackInputController");
-            if (_playerEntity.GetComponentInChildren<AttackComponent>())
+            if (_playerEntity.TryGetElement(out IAttackElement element) && element.CanAttack())
             {
-                //component.Attack();
+                element.Attack();
             }
         }
 
@@ -39,6 +34,6 @@ namespace ECS
         {
             _playerInput.Disable();
         }
-
     }
+
 }

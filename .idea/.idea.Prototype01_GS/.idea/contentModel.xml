@@ -4,25 +4,6 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Igor" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="Implementations" t="Include">
-              <e p="ButtonNext.cs" t="Include" />
-              <e p="CanvasPopup.cs" t="Include" />
-              <e p="CounterWidget.cs" t="Include" />
-              <e p="Popup1.cs" t="Include" />
-              <e p="Popup2.cs" t="Include" />
-            </e>
-            <e p="PopupSystem" t="Include">
-              <e p="IPopupLIstener.cs" t="Include" />
-              <e p="IPopupManager.cs" t="Include" />
-              <e p="Popup.cs" t="Include" />
-              <e p="PopupEventBus.cs" t="Include" />
-              <e p="PopupManager.cs" t="Include" />
-              <e p="PopupManagerInjector.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Plugins" t="Include">
           <e p="Zenject" t="Include">
             <e p="LICENSE.txt" t="Include" />
@@ -387,7 +368,61 @@
             <e p="Zenject.asmdef" t="Include" />
           </e>
         </e>
+        <e p="PopUpTestSysten" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Implementations" t="Include">
+              <e p="ButtonNext.cs" t="Include" />
+              <e p="CanvasPopup.cs" t="Include" />
+              <e p="CounterWidget.cs" t="Include" />
+              <e p="Popup1.cs" t="Include" />
+              <e p="Popup2.cs" t="Include" />
+            </e>
+            <e p="PopupSystem" t="Include">
+              <e p="IPopupLIstener.cs" t="Include" />
+              <e p="IPopupManager.cs" t="Include" />
+              <e p="Popup.cs" t="Include" />
+              <e p="PopupEventBus.cs" t="Include" />
+              <e p="PopupManager.cs" t="Include" />
+              <e p="PopupManagerInjector.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="ECS" t="Include">
+            <e p="Common" t="Include">
+              <e p="Attack" t="Include">
+                <e p="IAttackElement.cs" t="Include" />
+              </e>
+              <e p="Reload" t="Include">
+                <e p="IReloadElement.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Enemy" t="Include">
+              <e p="Entity" t="Include">
+                <e p="EnemyAttackElement.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Engine" t="Include">
+              <e p="IEntity.cs" t="Include" />
+              <e p="MonoElement.cs" t="Include" />
+              <e p="MonoEntity.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="Entity" t="Include">
+                <e p="PlayerAttackElement.cs" t="Include" />
+                <e p="PlayerReloadElement.cs" t="Include" />
+                <e p="PlayerWeaponStateElement.cs" t="Include" />
+              </e>
+              <e p="InputSystem" t="Include">
+                <e p="AttackInputController.cs" t="Include" />
+                <e p="ReloadInputController.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Weapon" t="Include">
+              <e p="IWeaponStateElement.cs" t="Include" />
+              <e p="WeaponService.cs" t="Include" />
+            </e>
+          </e>
           <e p="Gameplay" t="Include">
             <e p="Bullets" t="Include">
               <e p="Bullet.cs" t="Include" />
@@ -426,6 +461,51 @@
               <e p="InputActions.cs" t="Include" />
               <e p="InputController.cs" t="Include" />
             </e>
+            <e p="Inventory" t="Include">
+              <e p="Config" t="Include">
+                <e p="ItemComponentConfig.cs" t="Include" />
+                <e p="ItemConfig.cs" t="Include" />
+              </e>
+              <e p="Item" t="Include">
+                <e p="IItemComponent.cs" t="Include" />
+                <e p="Implementations" t="Include">
+                  <e p="ConsumableItemComponent.cs" t="Include" />
+                  <e p="EquipableItemComponent.cs" t="Include" />
+                  <e p="StackableItemComponent.cs" t="Include" />
+                </e>
+                <e p="Item.cs" t="Include" />
+                <e p="ItemType.cs" t="Include" />
+              </e>
+              <e p="System" t="Include">
+                <e p="IInventoryItemManager.cs" t="Include" />
+                <e p="InventoryItemManager.cs" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="EquipSlot.cs" t="Include" />
+              </e>
+            </e>
+            <e p="LevelSystem" t="Include">
+              <e p="ExperienceControllerUI.cs" t="Include" />
+              <e p="ExperienceManager.cs" t="Include" />
+              <e p="IExperienceControllerUI.cs" t="Include" />
+              <e p="IExperienceManager.cs" t="Include" />
+              <e p="ILevelManager.cs" t="Include" />
+              <e p="ISkillPointManager.cs" t="Include" />
+              <e p="LevelControllerUI.cs" t="Include" />
+              <e p="LevelManager.cs" t="Include" />
+              <e p="LevelSettings.cs" t="Include" />
+              <e p="LevelWindow.cs" t="Include" />
+              <e p="SkillPointController.cs" t="Include" />
+              <e p="SkillPointManager.cs" t="Include" />
+              <e p="Skills" t="Include">
+                <e p="ISkillController.cs" t="Include" />
+                <e p="SkillName.cs" t="Include" />
+                <e p="SkillsSettings.cs" t="Include" />
+                <e p="SkillUnlockController.cs" t="Include" />
+                <e p="UISkillTree.cs" t="Include" />
+              </e>
+              <e p="TestLevel.cs" t="Include" />
+            </e>
             <e p="System" t="Include">
               <e p="GameInstaller.cs" t="Include" />
             </e>
@@ -433,9 +513,29 @@
               <e p="Action.cs" t="Include" />
             </e>
             <e p="Weapon" t="Include">
-              <e p="IWeaponManager1.cs" t="Include" />
+              <e p="IAtackComponent.cs" t="Include" />
+              <e p="IWeaponComponent.cs" t="Include" />
+              <e p="IWeaponState.cs" t="Include" />
+              <e p="Manager" t="Include">
+                <e p="IWeaponManager.cs" t="Include" />
+                <e p="WeaponManager.cs" t="Include" />
+              </e>
+              <e p="Reload" t="Include">
+                <e p="BulletsCounterControllerUI.cs" t="Include" />
+                <e p="BulletsCounterUI.cs" t="Include" />
+                <e p="RocketVisibilityController.cs" t="Include" />
+                <e p="WeaponChangeController.cs" t="Include" />
+                <e p="WeaponReloadController.cs" t="Include" />
+              </e>
               <e p="WeaponComponent.cs" t="Include" />
-              <e p="WeaponManager.cs" t="Include" />
+              <e p="WeaponComponentBase.cs" t="Include" />
+              <e p="WeaponS" t="Include">
+                <e p="WeaponSystemKnife.cs" t="Include" />
+                <e p="WeaponSystemPistol.cs" t="Include" />
+                <e p="WeaponSystemRifle.cs" t="Include" />
+              </e>
+              <e p="WeaponState.cs" t="Include" />
+              <e p="WeaponStateID.cs" t="Include" />
             </e>
           </e>
           <e p="Scenes" t="Include">

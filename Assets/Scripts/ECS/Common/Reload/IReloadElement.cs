@@ -1,8 +1,9 @@
 namespace ECS
 {
-    public interface IReloadComponent
+    public interface IReloadElement
     {
         bool CanReload();
+
         void Reload();
     }
 }

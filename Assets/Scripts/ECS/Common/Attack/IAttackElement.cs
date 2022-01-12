@@ -1,11 +1,9 @@
 namespace ECS
 {
-
-
-    public interface IAttackComponent
+    public interface IAttackElement
     {
         bool CanAttack();
+
         void Attack();
     }
-
 }
