@@ -8,7 +8,7 @@ namespace ECS
     public class AttackInputController : MonoBehaviour
     {
         [SerializeField]
-        private Entity _playerEntity;
+        private MonoEntity _playerEntity;
 
         private PlayerInput _playerInput;
         public event Action OnAttack;
@@ -24,10 +24,11 @@ namespace ECS
         {
             OnAttack?.Invoke();
             Debug.Log("debug: attack AttackInputController");
-            if (_playerEntity.GetComponentInChildren<AttackComponent>())
+            if(_playerEntity.TryGetElement<IAttackComponent>(out var element))// && element.CanAttack())
             {
-                //component.Attack();
+                element.Attack();
             }
+            
         }
 
         private void OnEnable()

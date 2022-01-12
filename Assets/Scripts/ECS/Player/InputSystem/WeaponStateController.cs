@@ -1,10 +1,13 @@
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ECS
 {
-    public class ReloadInputController : MonoBehaviour
+    class WeaponStateController
     {
         [SerializeField]
         private MonoEntity _playerEntity;
@@ -14,18 +17,18 @@ namespace ECS
         void Awake()
         {
             _playerInput = new PlayerInput();
-            _playerInput.Player.Reload.performed += context => Reload();
+            _playerInput.Player.Fire.performed += context => Attack();
 
         }
 
 
-        private void Reload()
+        private void Attack()
         {
             OnAttack?.Invoke();
-            Debug.Log("debug: Reload ReloadInputController");
-            if (_playerEntity.TryGetElement<IReloadComponent>(out var element) && element.CanReload())
+            Debug.Log("debug: attack AttackInputController");
+            if (_playerEntity.TryGetElement<IWeaponStateComponent>(out var element))
             {
-                element.Reload();
+                //to do
             }
 
         }

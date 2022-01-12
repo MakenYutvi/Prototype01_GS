@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace ECS
 {
-
-
-    public class AttackComponent : ComponentEntity, IAttackComponent
+    public class PlayerReloadComponent : MonoElement, IReloadComponent
     {
-       
-        public virtual void Attack()
-        {
-            Debug.Log("debug: AttackComponent");
-        }
-
-        public virtual bool CanAttack()
+        public bool CanReload()
         {
             throw new System.NotImplementedException();
         }
+
+        public void Reload()
+        {
+            throw new System.NotImplementedException();
+        }
+
+      
     }
 }

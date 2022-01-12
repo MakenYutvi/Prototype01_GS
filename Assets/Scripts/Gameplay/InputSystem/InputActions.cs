@@ -73,6 +73,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""062559ad-e417-46cb-908c-c52f127ae491"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -337,6 +345,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""WeaponState3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""595c3b2e-4a2d-4c99-a36e-6dcf4a9ca15e"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -967,6 +986,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_WeaponState1 = m_Player.FindAction("WeaponState1", throwIfNotFound: true);
         m_Player_WeaponState2 = m_Player.FindAction("WeaponState2", throwIfNotFound: true);
         m_Player_WeaponState3 = m_Player.FindAction("WeaponState3", throwIfNotFound: true);
+        m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1039,6 +1059,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_WeaponState1;
     private readonly InputAction m_Player_WeaponState2;
     private readonly InputAction m_Player_WeaponState3;
+    private readonly InputAction m_Player_Reload;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -1050,6 +1071,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @WeaponState1 => m_Wrapper.m_Player_WeaponState1;
         public InputAction @WeaponState2 => m_Wrapper.m_Player_WeaponState2;
         public InputAction @WeaponState3 => m_Wrapper.m_Player_WeaponState3;
+        public InputAction @Reload => m_Wrapper.m_Player_Reload;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1080,6 +1102,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @WeaponState3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
                 @WeaponState3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
                 @WeaponState3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWeaponState3;
+                @Reload.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1105,6 +1130,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @WeaponState3.started += instance.OnWeaponState3;
                 @WeaponState3.performed += instance.OnWeaponState3;
                 @WeaponState3.canceled += instance.OnWeaponState3;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
         }
     }
@@ -1309,6 +1337,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnWeaponState1(InputAction.CallbackContext context);
         void OnWeaponState2(InputAction.CallbackContext context);
         void OnWeaponState3(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

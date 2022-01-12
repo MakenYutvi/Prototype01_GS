@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace ECS
 {
-    public class PlayerAttackComponent : AttackComponent
+    public class KnifeAttackElement : WeaponAttackElementMono
     {
         public override void Attack()
         {
-            Debug.Log("debug: PlayerAttackComponent");
+            Debug.Log("knife attack");
         }
 
         public override bool CanAttack()
         {
-            throw new System.NotImplementedException();
+            return true;
         }
+
+    
     }
 }
