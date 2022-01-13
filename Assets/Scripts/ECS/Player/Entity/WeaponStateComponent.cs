@@ -5,9 +5,11 @@ namespace ECS
 {
     public class WeaponStateComponent : MonoElement, IWeaponStateComponent
     {
-        public void SetState()
+        [SerializeField]
+        private WeaponService _weaponService;
+        public void SetState(WeaponStateID weaponID)
         {
-            throw new System.NotImplementedException();
+            _weaponService.SetCurrentWeapon(weaponID);
         }
 
    

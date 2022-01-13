@@ -2,7 +2,7 @@ namespace ECS
 {
     public interface IWeaponStateComponent
     {
-        void SetState();
+        void SetState(WeaponStateID weapon);
     }
 
 }

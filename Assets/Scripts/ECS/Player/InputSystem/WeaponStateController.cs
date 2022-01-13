@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace ECS
 {
-    class WeaponStateController
+    class WeaponStateController :MonoBehaviour
     {
         [SerializeField]
         private MonoEntity _playerEntity;
@@ -17,20 +17,33 @@ namespace ECS
         void Awake()
         {
             _playerInput = new PlayerInput();
-            _playerInput.Player.Fire.performed += context => Attack();
+            _playerInput.Player.WeaponState1.performed += context => WeaponState1();
+            _playerInput.Player.WeaponState2.performed += context => WeaponState2();
+            _playerInput.Player.WeaponState3.performed += context => WeaponState3();
 
         }
 
 
-        private void Attack()
-        {
-            OnAttack?.Invoke();
-            Debug.Log("debug: attack AttackInputController");
+        private void WeaponState1()
+        {        
             if (_playerEntity.TryGetElement<IWeaponStateComponent>(out var element))
             {
-                //to do
+                element.SetState(WeaponStateID.KNIFE);
             }
-
+        }
+        private void WeaponState2()
+        {
+            if (_playerEntity.TryGetElement<IWeaponStateComponent>(out var element))
+            {
+                element.SetState(WeaponStateID.PISTOL);
+            }
+        }
+        private void WeaponState3()
+        {         
+            if (_playerEntity.TryGetElement<IWeaponStateComponent>(out var element))
+            {
+                element.SetState(WeaponStateID.RIFLE);
+            }
         }
 
         private void OnEnable()

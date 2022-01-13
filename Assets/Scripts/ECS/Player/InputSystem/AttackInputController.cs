@@ -23,7 +23,6 @@ namespace ECS
         private void Attack()
         {
             OnAttack?.Invoke();
-            Debug.Log("debug: attack AttackInputController");
             if(_playerEntity.TryGetElement<IAttackComponent>(out var element))// && element.CanAttack())
             {
                 element.Attack();

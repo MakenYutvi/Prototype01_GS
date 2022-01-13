@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ECS
 {
 
@@ -7,7 +9,7 @@ namespace ECS
 
         event Action OnCurrentWeaponChanged;
         bool TryGetCurrentWeapon(out IEntity weapon);
-        void SetCurrentWeapon(MonoEntity weapon);
-        MonoEntity[] GetAllWeapons();
+        void SetCurrentWeapon(WeaponStateID weaponID);
+        List<MonoEntity> GetAllWeapons();
     }
 }
