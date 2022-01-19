@@ -3747,7 +3747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562f454d97f13cc4ba736f2088d9af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponAttackSystem: {fileID: 0}
+  _weaponAttackSystem: {fileID: 1826425573}
 --- !u!1 &951391538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,7 +7791,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1782268159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af19d8c65e2e714c825f551449c78ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d67e8476c65a1f4fb4665e271a23f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1788134056
